@@ -13,3 +13,6 @@ const PLACE_GAME_PASS_DATA = "https://www.roblox.com/games/getgamepassesinnerpar
 const SENT = "https://www.roblox.com/messages/api/get-messages?messageTab=1&pageNumber=%s&pageSize=20";
 const INBOX = "https://www.roblox.com/messages/api/get-messages?messageTab=0&pageNumber=%s&pageSize=20";
 const ARCHIVED = "https://www.roblox.com/messages/api/get-messages?messageTab=3&pageNumber=%s&pageSize=20";
+
+/* Miscellaneous */
+const USD_RATE = 350 / 100000;

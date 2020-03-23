@@ -14,10 +14,10 @@ const ESTIMATE_EARNINGS = `<span class="btn-min-width btn-control-xs btn-more">E
 const ESTIMATED_EARNINGS_STORE_CARD = `
 <li class="_erf_injection list-item real-game-pass">
 	<div class="store-card">
-		<img class="" src="Icons/Earnings.png">
+		<img class="" src="http://beginningstocktrader.com/wp-content/uploads/2016/02/dollarsign-1-150x150.png">
 		<div class="store-card-caption">
-			<div class="text-overflow store-card-name" title="Estimate Earnings">
-				Estimate Earnings
+			<div class="text-overflow store-card-name" title="Estimated Earnings">
+				Estimated Earnings
 			</div>
 
 			<div class="store-card-price">

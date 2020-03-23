@@ -13,7 +13,7 @@ function ParseURL() {
 	}
 
 	let matches = url.match(/\.com\/(\w+)\/(\d+)/i);
-	
+
 	if (matches && matches.length > 0) {
 		let page = matches[1];
 		let id = matches[2];
@@ -48,7 +48,7 @@ function ParseURL() {
 // Object Prototyping
 Object.prototype.strip = function() {
 	let args = [];
-	
+
 	for(let index = 0; index < this.length; index++) {
 		args[index] = this[index];
 	}

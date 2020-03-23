@@ -9,7 +9,7 @@
 
 			"/Constants/Functions.js",
 			"/Constants/Web APIs.js",
-			
+
 			"Background.js"
 		],
 		"persistent": false
@@ -46,6 +46,6 @@
 		"cookies",
 		"*://*.roblox.com/*"
 	],
-	
+
 	"manifest_version": 2
 }

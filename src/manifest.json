@@ -1,0 +1,41 @@
+{
+	"name": "Enhanced Roblox Functionality",
+	"version": "0.1",
+	"description": "...",
+
+	"background": {
+		"scripts": [
+			"Libraries/Background/Constants.js",
+			"Background.js"
+		],
+
+		"persistent": false
+	},
+
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.roblox.com/*"
+			],
+
+			"js": [
+				"Libraries/jQuery.js",
+				"Libraries/Constants.js",
+				"Libraries/Document.js",
+				"Libraries/HelperFunctions.js",
+				"Libraries/Event.js",
+				"EventHandler.js",
+				"Features/Store.js",
+				"Main.js"
+			]
+		}
+	],
+
+	"permissions": [
+		"tabs",
+		"notifications",
+		"*://*.roblox.com/*"
+	],
+
+	"manifest_version": 2
+}

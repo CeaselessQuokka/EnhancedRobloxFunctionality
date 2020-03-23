@@ -50,4 +50,3 @@ class Listener {
 		this.MutationsListener.disconnect();
 	}
 }
-

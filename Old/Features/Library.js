@@ -8,7 +8,7 @@ var Library = {
 Library.Run = function(json) {
 	if (!Library.Ran) {
 		Library.Ran = true;
-		
+
 		// Create Sales Entry and Created Entry and Updated Entry (if needed)
 		let createdElement = $(".clearfix.item-type-field-container")
 		.before(CatalogEntry.format("Sales", (json.Sales).toLocaleString()))

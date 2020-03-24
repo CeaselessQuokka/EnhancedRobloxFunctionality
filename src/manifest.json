@@ -1,14 +1,17 @@
 {
-	"name": "Enhanced Roblox Functionality",
+	"name": "Extra Roblox Features",
 	"version": "0.1",
-	"description": "...",
+	"description": "Does stuff.",
 
 	"background": {
 		"scripts": [
-			"Libraries/Background/Constants.js",
+			"/Libraries/jquery-3.4.0.min.js",
+
+			"/Constants/Functions.js",
+			"/Constants/Web APIs.js",
+
 			"Background.js"
 		],
-
 		"persistent": false
 	},
 
@@ -19,21 +22,28 @@
 			],
 
 			"js": [
-				"Libraries/jQuery.js",
-				"Libraries/Constants.js",
-				"Libraries/Document.js",
-				"Libraries/HelperFunctions.js",
-				"Libraries/Event.js",
-				"EventHandler.js",
-				"Features/Store.js",
-				"Main.js"
+				"/Libraries/jquery-3.4.0.min.js",
+
+				"/Constants/Functions.js",
+				"/Constants/HTML Templates.js",
+
+				"/Libraries/Event.js",
+				"/Libraries/Observer.js",
+
+				"/Features/Catalog.js",
+				"/Features/Library.js",
+				"/Features/GameStore.js",
+				"/Features/GamePass.js",
+
+				"Event Handler.js",
+				"Index.js"
 			]
 		}
 	],
 
 	"permissions": [
 		"tabs",
-		"notifications",
+		"cookies",
 		"*://*.roblox.com/*"
 	],
 

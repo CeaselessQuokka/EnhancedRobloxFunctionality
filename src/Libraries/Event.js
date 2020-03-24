@@ -1,16 +1,8 @@
-/* Event Class */
-"use strict";
-
 // Objects
 var Events = {}
 
 // Classes
 class Event {
-	/**
-	 *
-	 * @param handle The name of the event to create.
-	 * @param callback The callback to call when the event is fired.
-	 */
 	constructor(handle, callback) {
 		// Set Properties
 		this.Handle = handle;
@@ -25,24 +17,19 @@ class Event {
 		}
 	}
 
-	fire(/*tuple*/) {
+	Fire(/*tuple*/) {
 		// Calls Callback
-		this.Callback(toArray(arguments));
+		this.Callback(arguments.strip());
 	}
 }
 
-/* Functions */
-
-/**
- * Fires all connected events given "handle".
- * @param handle The name of the event to call.
- */
-function fireAll(handle /*, tuple*/) {
+// Functions
+function FireAll(handle/*, tuple*/) {
 	// Calls All Connected Callbacks to Event
 
 	if (Events.hasOwnProperty(handle) === true) {
 		let handleData = Events[handle];
-		let args = toArray(arguments);
+		let args = arguments.strip();
 		args.shift();
 
 		for (let index = 0; index < handleData.length; index++) {

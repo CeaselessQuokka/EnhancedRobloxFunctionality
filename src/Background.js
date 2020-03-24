@@ -28,6 +28,10 @@ chrome.runtime.onMessage.addListener(function(message, sender, callback) {
 				})
 			);
 		}
+	} else if (message.Action === "get-pass-info") {
+		fetch(GAMEPASS_INFO + message.ID).then(response => response.json().then(jsonData => callback(jsonData)));
+	} else if (message.Action === "get-catalog-info") {
+		fetch(PRODUCT_INFO + message.ID).then(response => response.json().then(jsonData => callback(jsonData)));
 	}
 
 	return true;

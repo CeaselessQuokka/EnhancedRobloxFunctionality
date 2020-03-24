@@ -16,9 +16,17 @@ let inject = function() {
 		let [page, subpage, id] = parsedURL;
 
 		if (page === "games") {
+			injectGame(id);
+
 			if (subpage === "store") {
 				injectStore(id);
 			}
+		} else if (page === "game-pass") {
+			injectGamePassInfo(id);
+		} else if (page === "catalog") {
+			injectCatalogInfo(id);
+		} else if (page === "library") {
+			injectLibraryInfo(id);
 		}
 	}
 }

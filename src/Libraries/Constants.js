@@ -28,3 +28,14 @@ const ESTIMATED_EARNINGS_STORE_CARD = `
 		</div>
 	</div>
 </li>`
+
+// The field that will display the created date and sales of an asset.
+const FIELD_TEMPLATE = `
+<div class="_erf_injection clearfix item-field-container">
+	<div class="text-label text-overflow field-label">{0}</div>
+	<div class="field-content date-time-i18n">{1}</div>
+</div>
+`
+
+/* Miscellaneous */
+const USD_RATE = 350 / 100000;

@@ -24,8 +24,15 @@
 				"Libraries/Document.js",
 				"Libraries/HelperFunctions.js",
 				"Libraries/Event.js",
+
 				"EventHandler.js",
+
+				"Features/VotePercentage.js",
+				"Features/Game.js",
 				"Features/Store.js",
+				"Features/GamePass.js",
+				"Features/Catalog.js",
+
 				"Main.js"
 			]
 		}

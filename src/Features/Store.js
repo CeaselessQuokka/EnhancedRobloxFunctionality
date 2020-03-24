@@ -3,7 +3,7 @@
 
 function injectStore(id) {
 	// Add the "Estimate Earnings" button to the webpage.
-	if (!("AppendEstimateEarnings" in SessionData)) {
+	if (!("AppendedEstimateEarnings" in SessionData)) {
 		$("#rbx-game-passes .container-header").append(ESTIMATE_EARNINGS).click(() => {
 			let gamePassIDs = [];
 			$("._erf_injection.list-item.real-game-pass").remove();
@@ -38,13 +38,11 @@ function injectStore(id) {
 				totalRobux = Math.floor(totalRobux);
 
 				$("#rbx-passes-container").append(
-					ESTIMATED_EARNINGS_STORE_CARD
-					.replace("{0}", totalRobux.toLocaleString())
-					.replace("{1}", totalUSD)
+					ESTIMATED_EARNINGS_STORE_CARD.replace("{0}", totalRobux.toLocaleString()).replace("{1}", totalUSD)
 				);
 			});
 		});
 
-		SessionData.AppendEstimateEarnings = true;
+		SessionData.AppendedEstimateEarnings = true;
 	}
 }

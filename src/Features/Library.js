@@ -1,13 +1,34 @@
 /* Adds vote percentage to the game when hovering over the vote area. */
 "use strict";
 
-function injectLibraryInfo(id) {
-	if (!("AppendedLibraryInfo" in SessionData)) {
+function injectCatalogInfo(id) {
+	if (!("AppendedCatalogInfo" in SessionData)) {
 		chrome.runtime.sendMessage({
 			ID: id,
-			Action: "get-library-info"
+			Action: "get-catalog-info"
 		}, data => {
 			let typeField = $(`.text-label.text-overflow.field-label:contains("Type")`);
+
+			// Add classes to the Type field so it has proper margining.
+			typeField.parent().addClass("item-field-container");
+
+			// Append Sales to the item details, and add extra details to Sales title.
+			let salesField = $(FIELD_TEMPLATE.replace("{0}", "Sales").replace("{1}", data.Sales.toLocaleString()));
+
+			let totalRobux = data.Sales * data.PriceInRobux * 0.7;
+			let totalUSD = totalRobux * USD_RATE;
+
+			totalRobux = Math.floor(totalRobux).toLocaleString();
+			totalUSD = totalUSD.toLocaleString(undefined, {
+				minimumFractionDigits: 2,
+				maximumFractionDigits: 2
+			})
+
+			salesField.attr("title", `Total Robux made: ${totalRobux}\nTotal USD made: ${totalUSD}`);
+			typeField.parent().before(salesField);
+
+			// Remove any existing date fields.
+			$(".date-time-i18n").parent().parent().remove();
 
 			// Append Updated date to the item details.
 			typeField.parent().after(
@@ -48,5 +69,5 @@ function injectLibraryInfo(id) {
 		injectVotePercentage();
 	}
 
-	SessionData.AppendedLibraryInfo = true;
+	SessionData.AppendedCatalogInfo = true;
 }

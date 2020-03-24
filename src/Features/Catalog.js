@@ -27,6 +27,9 @@ function injectCatalogInfo(id) {
 			salesField.attr("title", `Total Robux made: ${totalRobux}\nTotal USD made: ${totalUSD}`);
 			typeField.parent().before(salesField);
 
+			// Remove any existing date fields.
+			$(".date-time-i18n").parent().parent().remove();
+
 			// Append Updated date to the item details.
 			typeField.parent().after(
 				FIELD_TEMPLATE.replace("{0}", "Updated").replace(

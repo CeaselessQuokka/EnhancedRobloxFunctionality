@@ -33,7 +33,7 @@ const ESTIMATED_EARNINGS_STORE_CARD = `
 const FIELD_TEMPLATE = `
 <div class="_erf_injection clearfix item-field-container">
 	<div class="text-label text-overflow field-label">{0}</div>
-	<div class="field-content date-time-i18n">{1}</div>
+	<div class="field-content">{1}</div>
 </div>
 `
 
